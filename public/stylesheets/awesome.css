@@ -1,0 +1,35 @@
+/* HTML */
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 14px;
+  color: #000000;
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+}
+a {
+  color: #000000;
+  text-decoration: none;
+}
+a:focus, a:active {
+  outline: none;
+}
+img, a img {
+  border: none;
+}
+ul, ol {
+  margin-left: 24px;
+}
+th, td {
+  vertical-align: top;
+  font-weight: normal;
+}
+/* Global */
+
+/* Header */
+
+/* Content */
+
+/* Footer */
