@@ -26,10 +26,56 @@ th, td {
   vertical-align: top;
   font-weight: normal;
 }
-/* Global */
 
-/* Header */
-
-/* Content */
-
-/* Footer */
+/* resume */
+#resume {
+  padding: 20px;
+  background-color: #222222;
+  color: #ffffff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 20px;
+  font-size: 14px;
+}
+#resume a {
+  color: #cccccc;
+}
+#resume a:hover {
+  color: #07E2FF;
+}
+#resume .section {
+  margin: 10px 0;
+}
+#resume div.section {
+	margin-bottom: 40px;
+	clear: both;
+}
+#resume div.section h2 {
+	float: left;
+	width: 125px;
+	text-align: right;
+	font-size: 11px;
+	margin: 0;
+}
+#resume div.section dl,
+#resume div.section p,
+#resume div.section ul {
+	margin-left: 140px;
+	padding: 0;
+	list-style: decimal;
+}
+#resume div.section dl dd { 
+	margin: 0;
+	padding: 0;
+}
+#resume div.section p.position span {
+	font-weight: bold;
+	font-size: 15px;
+}
+#resume div.section ul li {
+	margin-left: 30px;
+}
+#resume div.section p.skills {
+	color: #444;
+	font-weight: bold;
+  margin-bottom: 30px;
+}
