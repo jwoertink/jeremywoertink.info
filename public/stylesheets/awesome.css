@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Just+Me+Again+Down+Here);
 /* HTML */
 * {
   margin: 0;
@@ -5,9 +6,9 @@
 }
 body {
   font-size: 14px;
-  color: #000000;
+  color: #ffffff;
   font-family: Arial, sans-serif;
-  background: #ffffff;
+  background: #222222;
 }
 a {
   color: #000000;
@@ -26,7 +27,35 @@ th, td {
   vertical-align: top;
   font-weight: normal;
 }
-
+/* home */
+#wrap {
+  padding: 20px;
+  font-size: 24px;
+}
+#leftside {
+  float: left;
+  width: 300px;
+}
+#wrap #photo {
+  background-color: #ffffff;
+  padding: 10px;
+  border: 1px solid #cecece;
+  text-align: center;
+  -moz-box-shadow: 0 0 10px #0a0a0a;
+  -webkit-box-shadow: 0 0 10px #0a0a0a;
+  box-shadow: 0 0 10px #0a0a0a;
+  margin-right: 20px;
+  font-size: 0;
+}
+#wrap #content {
+  float: left;
+  width: 600px;
+  margin-left: 20px;
+}
+#wrap #content h1 {
+  font-size: 48px;
+  font-family: 'Just Me Again Down Here', arial, serif;
+}
 /* resume */
 #resume {
   padding: 20px;
@@ -40,7 +69,7 @@ th, td {
   color: #cccccc;
 }
 #resume a:hover {
-  color: #07E2FF;
+  color: #0BF30B;
 }
 #resume .section {
   margin: 10px 0;
@@ -61,7 +90,9 @@ th, td {
 #resume div.section ul {
 	margin-left: 140px;
 	padding: 0;
-	list-style: decimal;
+}
+#resume div.section ul li ul {
+  margin: 0;
 }
 #resume div.section dl dd { 
 	margin: 0;
@@ -78,4 +109,18 @@ th, td {
 	color: #444;
 	font-weight: bold;
   margin-bottom: 30px;
+}
+
+#back {
+  display: block;
+  position: fixed;
+  z-index: 10;
+  left: -24px;
+  top: 40%;
+  background-color: #c2c2c2;
+  padding: 5px;
+  height: 75px; 
+}
+#back:hover {
+  background-color: #0BF30B;
 }

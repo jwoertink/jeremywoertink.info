@@ -9,8 +9,56 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/awesome.css">
   </head>
   <body>
-    <h1>Jeremy Woertink</h1>
-    <a href="/resume">Visit my résumé</a>
+    <div id="wrap">
+      <div id="leftside">
+        <div id="photo">
+          <img src="images/me.jpg" alt="Jeremy Woertink">
+        </div>
+        <br><br>
+        <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+        <script>
+        new TWTR.Widget({
+          version: 2,
+          type: 'profile',
+          rpp: 4,
+          interval: 6000,
+          width: 250,
+          height: 300,
+          theme: {
+            shell: {
+              background: '#333333',
+              color: '#ffffff'
+            },
+            tweets: {
+              background: '#000000',
+              color: '#ffffff',
+              links: '#4aed05'
+            }
+          },
+          features: {
+            scrollbar: false,
+            loop: false,
+            live: false,
+            hashtags: true,
+            timestamp: true,
+            avatars: false,
+            behavior: 'all'
+          }
+        }).render().setUser('jeremywoertink').start();
+        </script>
+      </div>
+      
+      <div id="content">
+        <h1>Jeremy Woertink</h1>
+        <a href="/resume">My Résumé</a>
+        <span>&nbsp;|&nbsp;</span>
+        <a href="#about">About Me</a>
+        <span>&nbsp;|&nbsp;</span>
+        <a href="https://github.com/jwoertink" target="_blank">Fork Me</a>
+        
+      </div>
+      <br clear="all">
+    </div>
     <script type="text/javascript" charset="utf-8" src="scripts/jquery.js"></script>
     <script type="text/javascript" charset="utf-8" src="scripts/awesome.js"></script>
   </body>
