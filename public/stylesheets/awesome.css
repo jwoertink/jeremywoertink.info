@@ -10,6 +10,8 @@ body {
   color: #ffffff;
   font-family: Arial, sans-serif;
   background: #ADE1FF;
+}
+body#home {
   overflow: hidden;
 }
 a {
@@ -150,17 +152,17 @@ th, td {
 /* resume */
 #resume {
   padding: 20px;
-  background-color: #222222;
-  color: #ffffff;
+  background-color: #F3F092;
+  color: #000000;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 20px;
   font-size: 14px;
 }
 #resume a {
-  color: #cccccc;
+  color: #970000;
 }
 #resume a:hover {
-  color: #0BF30B;
+  color: #970000;
 }
 #resume .section {
   margin: 10px 0;
@@ -213,5 +215,5 @@ th, td {
   height: 75px; 
 }
 #back:hover {
-  background-color: #0BF30B;
+  background-color: #970000;
 }
