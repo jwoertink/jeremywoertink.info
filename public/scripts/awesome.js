@@ -1,103 +1,45 @@
 /*  Jeremy Woertink 2011 
  *
  ********/
-var development = (window.location.hostname == "localhost"),
-    new_to_site = function() {
-      if(development) {
-        return true;
-      } else {
-        return getCookie("visited") == null;
-      }
-    };
 
 //Initialize stuff
 $(function() {
-  animateStory();
+
   backButton();
-  $('a[rel=about]').click(function() {
-    $('#story > *').animate({
-      top: "-1000px"
-    }, 1500, "easeInElastic", function() {
-      $("body").stop().animate({"background-color": "#000000"}, 2000, function() {
-        $('#bottom').fadeIn("slow");
-        setTimeout(function() { $('#bottom span').fadeIn("fast"); }, 2000);
-      });
-    });
-    
-     return false
-  });
+
 });
 
-//Animations for the home page
-function animateStory() {
-  if($('#story').length > 0) {
-    intro();
-  }
-  
-  function intro() {
-    if(new_to_site()) {
-      setTimeout(function() {
-        $('.greeting').show("fast").animate({
-          top: "100px",
-          left: "100px"
-        }, 1500, "easeInCirc", two);
-      }, 1500);
-      setCookie("visited", true)
-    } else {
-      showNormalSite();
+function twitter() {
+  return new TWTR.Widget({
+    version: 2,
+    type: 'profile',
+    rpp: 4,
+    interval: 6000,
+    width: 250,
+    height: 300,
+    theme: {
+      shell: {
+        background: '#333333',
+        color: '#ffffff'
+      },
+      tweets: {
+        background: '#000000',
+        color: '#ffffff',
+        links: '#4aed05'
+      }
+    },
+    features: {
+      scrollbar: false,
+      loop: false,
+      live: false,
+      hashtags: true,
+      timestamp: true,
+      avatars: false,
+      behavior: 'all'
     }
-  }
-  function two() {
-    setTimeout(function() {
-      $('.tagline').animate({
-        left: $(window).width() + "px"
-      }, 300, function() {
-        $('.tagline').show("fast").animate({
-          top: "170px",
-          left: "340px"
-        }, 1500, "easeInQuint", three);
-      });
-    });
-  }
-  function three() {
-    setTimeout(function() {
-      $('.red.bubble').fadeIn("fast").animate({
-        top: "300px",
-        left: ($(window).width() - 500) + "px"
-      }, 5000, "easeInCubic", function() {
-        $(this).animate({top: "65px"}, 300, "easeOutExpo", four);
-      });
-    }, 300);
-  }
-  function four() {
-    setTimeout(function() {
-      $('.green.bubble').fadeIn("fast").animate({
-        left: "10px",
-        bottom: "-100px"
-      }, 1000, function() {
-        $(this).animate({
-          top: "200px",
-          height: "80px"
-        }, 1000, "easeOutBounce", five);
-      });
-    });
-  }
-  function five() {
-    setTimeout(function() {
-      $('.yellow.bubble').animate({
-        top: ($(window).height() - 300) + "px",
-        left: ($(window).width() / 2) + "px"
-      }, 300, function() {
-        $(this).slideDown("fast");
-      });
-    });
-  }
+  }).render().setUser('jeremywoertink').start();
 }
 
-function showNormalSite() {
-  $("body").stop().animate({"background-color": "#222222"}, 800);
-  $('#site').fadeIn('slow');
-}
 
 
 //Displays a back button to the home page from the 

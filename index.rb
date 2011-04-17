@@ -1,4 +1,6 @@
 require 'sinatra'
+require "sinatra/reloader" if development?
+
 LOCAL_PATH = File.dirname(__FILE__);
 set :views, LOCAL_PATH + '/views'
 set :public, LOCAL_PATH + '/public'
