@@ -4,43 +4,32 @@
 
 //Initialize stuff
 $(function() {
-
+  startGame()
   backButton();
-
 });
-
-function twitter() {
-  return new TWTR.Widget({
-    version: 2,
-    type: 'profile',
-    rpp: 4,
-    interval: 6000,
-    width: 250,
-    height: 300,
-    theme: {
-      shell: {
-        background: '#333333',
-        color: '#ffffff'
-      },
-      tweets: {
-        background: '#000000',
-        color: '#ffffff',
-        links: '#4aed05'
-      }
-    },
-    features: {
-      scrollbar: false,
-      loop: false,
-      live: false,
-      hashtags: true,
-      timestamp: true,
-      avatars: false,
-      behavior: 'all'
-    }
-  }).render().setUser('jeremywoertink').start();
+function startGame() {
+  if($('#game').length > 0) {
+    $('#game').focus();
+  	var activateControls = true;
+  	$('#game').focus(function() {
+  		activateControls = true;
+  	});
+  	$('#game').blur(function() {
+  		activateControls = false;
+  	});
+    Game.start(mapone, 0, 0);
+    $(window).keypress(function(event) {
+      var code = (event.keyCode ? event.keyCode : event.which);
+  		if(activateControls && code == 13) {
+  			$('#game').blur();
+  		}
+  		if(Game.controls[code] != null && activateControls) {
+  		  Game.keyboard.parseInput(event);
+  			event.preventDefault;
+  		}
+    });
+  }
 }
-
-
 
 //Displays a back button to the home page from the 
 //Resume page only when the user hits the bottom of the page
