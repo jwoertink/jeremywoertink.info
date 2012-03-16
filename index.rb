@@ -11,10 +11,6 @@ class JeremyWoertink < Sinatra::Base
     erb :index
   end
   
-  get '/coffee' do
-    erb :coffee
-  end
-  
   get '/resume' do
     erb :resume
   end
