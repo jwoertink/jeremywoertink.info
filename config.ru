@@ -3,7 +3,8 @@ require 'bundler'
 
 Bundler.require
 require 'sinatra'
-require "sinatra/reloader" if development?
+require 'sinatra/contrib/all'
+require 'v8'
 
 LOCAL_ROOT = File.dirname(__FILE__)
 require File.join(LOCAL_ROOT, 'player')

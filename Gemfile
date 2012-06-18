@@ -1,8 +1,10 @@
 source :rubygems
 
 gem "sinatra"
+gem "coffee-script"
+gem "therubyracer"
 
 group :development do
-  gem 'sinatra-reloader'
+  gem 'sinatra-contrib'
   gem 'heroku'
 end

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jeremy Woertink | Admin</title>
+    <meta charset="utf-8">
+    <meta name="robots" content="index,follow">
+    <link rel="stylesheet" href="/stylesheets/jquery-ui.css">
+    <link rel="stylesheet" href="/stylesheets/admin.css">
+  </head>
+  <body id="admin">
+    <div id="wrap">
+      <div id="sidebar">
+        <h2>Images</h2>
+        <% @images.each do |img| %>
+          <img src="<%= img %>" class="icon-img draggable">
+        <% end %>
+      </div>
+      <div id="window" class="dropzone">
+        
+      </div>
+      <br clear="all">
+    </div>
+    <script charset="utf-8" src="/javascripts/jquery.js"></script>
+    <script charset="utf-8" src="/javascripts/jquery-ui.js"></script>
+    <script charset="utf-8" src="/javascripts/application.js"></script>
+  </body>
+</html>
