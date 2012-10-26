@@ -1,0 +1,3 @@
+  root     /                 site#index
+resume GET /resume(.:format) site#resume
+ waves GET /waves(.:format)  waves#index

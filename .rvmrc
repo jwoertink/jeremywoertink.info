@@ -1,1 +1,1 @@
-rvm use 1.9.2-p290@jeremywoertink
+rvm use 1.9.3-p194@jeremywoertink --create

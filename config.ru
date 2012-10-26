@@ -1,12 +1,4 @@
-require 'rubygems'
-require 'bundler'
+# This file is used by Rack-based servers to start the application.
 
-Bundler.require
-require 'sinatra'
-require 'sinatra/contrib/all'
-require 'v8'
-
-LOCAL_ROOT = File.dirname(__FILE__)
-require File.join(LOCAL_ROOT, 'player')
-require File.join(LOCAL_ROOT, 'index')
-run JeremyWoertink
+require ::File.expand_path('../config/environment',  __FILE__)
+run Jeremywoertink::Application

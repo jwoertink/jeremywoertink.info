@@ -1,0 +1,25 @@
+!!! 5
+%html(lang="en")
+  %head
+    %meta(charset="utf-8")
+    %meta(http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1")
+    %meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    %meta(name="robots" content="index,follow")
+    %meta(name="keywords" content="las vegas ruby developer, las vegas rails developer, las vegas javascript developer, las vegas php developer, las vegas yahoo store developer, las vegas programmer")
+    %meta(name="description" content="Jeremy Woertink is from Las Vegas, and is a local software developer, co-organizer of the @LVRUG, and plays Bass Guitar.")
+    %title Jeremy Woertink | Las Vegas Web Developer | LVRUG Co-Organizer
+    
+    = csrf_meta_tags
+    /[if lt IE 9]
+      = javascript_include_tag "http://html5shim.googlecode.com/svn/trunk/html5.js"
+    = stylesheet_link_tag("application", :media => "screen")
+  %body{:id => params['action']}
+    .container
+      .row
+        .span12
+          = bootstrap_flash
+          = yield
+    
+      %footer.page-footer
+        
+    = javascript_include_tag "application"
