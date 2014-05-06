@@ -1,5 +1,5 @@
+require 'rubygems'
 require 'sinatra'
-Bundler.require
 $: << File.dirname(__FILE__)
 require 'app'
 
