@@ -2,9 +2,53 @@
   margin: 0;
   padding: 0;
 }
+html, body {
+  height: 100%;
+}
 body {
   background-color: white;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+/* HOME */
+#home {
+  background-image: url('/images/me.jpg');
+  background-color: black;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-clip: border-box;
+  background-origin: padding-box;
+  background-size: cover;
+  padding: 50px 20px 20px;
+  height: 100%;
+  color: white;
+}
+.main-title {
+  font-size: 72px;
+  font-weight: 300;
+  line-height: 78px;
+  color: white;
+  text-shadow: 1px 1px 0 #eeeeee, 2px 2px 0 #dddddd, 3px 3px 0 #cccccc;
+  height: 80px;
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  margin: 0 auto;
+  margin-left: -250px;
+  margin-top: -250px;
+  width: 500px;
+}
+#footer {
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  height: 60px;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+#footer .container {
+  margin: 20px auto;
 }
 /* RESUME */
 #resume {
