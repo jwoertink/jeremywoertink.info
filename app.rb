@@ -2,6 +2,7 @@ require 'sinatra'
 require 'slim'
 
 set :slim, pretty: true
+set :server, :puma
 
 get '/' do
   slim :index
